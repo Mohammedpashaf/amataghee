@@ -1,5 +1,5 @@
-import amataLogo from '../../assets/img/amata-logo.jpeg';
 import { useCallback, useState } from 'react';
+import amataLogo from '../../assets/img/amata-logo.jpeg';
 import ArrowDown from './ArrowDown';
 import SubHeader from './Subheader';
 
@@ -16,9 +16,9 @@ export default function Example() {
   
   return (
     
-    <div className='w-4/5 mx-auto text-center max-w-screen-lg mx-auto'>
-      <header class="py-4 px-4 sm:px-10 relative z-50">
-        <div class='max-w-7xl w-full mx-auto flex flex-wrap items-center gap-4'>
+    <div className='sm:w-4/5 mx-auto text-center max-w-screen-lg mx-auto'>
+      <header class="py-4 sm:px-4 sm:px-10 relative z-50">
+        <div class='max-w-7xl w-full mx-auto flex flex-wrap items-center gap-4 p-2'>
           <a href="javascript:void(0)"><img src={amataLogo} alt="logo" class='w-40' />
           </a>
       
@@ -90,7 +90,7 @@ export default function Example() {
       
           <div class='flex ml-auto'>
             <button
-              class='hover:text-[#62360F] border border-full-3 flex items-center transition-all font-bold px-5 py-3'>Contact Us
+              class='hover:text-[#62360F] border border-full-3 flex items-center transition-all font-bold px-5 sm:py-3'>Contact Us
             </button>
       
             <button onClick={handleClick} id="toggleOpen" class='lg:hidden ml-7'>
