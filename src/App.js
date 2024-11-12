@@ -1,9 +1,9 @@
 import './App.css';
-import './output.css';
-import './custom.css';
+import Footer from './components/common/Footer';
 import NavBar from './components/common/NavBar';
 import MainSection from './components/MainSection';
-import Footer from './components/common/Footer';
+import './custom.css';
+import './output.css';
 function App() {
   return (
     <div className='bg-name'>

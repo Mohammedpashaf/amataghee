@@ -109,7 +109,7 @@ color: #62360F;
 }
 .pad-margin-left{
     padding: 20% 0px;
-    margin-left: 70px;
+    margin-left: 3rem;
 }
 .pt-7{
     padding-top: 8rem;
@@ -328,4 +328,21 @@ line-height: 23.44px;
 text-align: left;
 color: #62360F;
 /* display: flex; */
+}
+@media screen and (max-width: 1024px) {
+  .p-l-10 {
+    padding-left: 0;
+  }
+  .m-l-3{
+    margin-left: 0;
+  }
+  .pad-margin-left{
+    margin-left: 3rem
+  }
+  .border-full{
+    border: 1px solid #62360F !important;
+  }
+  .p-l-5{
+    padding-left: 0;
+  }
 }
