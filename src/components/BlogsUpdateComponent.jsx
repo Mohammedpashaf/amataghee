@@ -1,7 +1,7 @@
-import ContentComponent from "./common/ContentComponent";
-import TitleComponent from "./common/TitleComponent";
 import mansun from '../assets/img/mansun.png';
 import woman from '../assets/img/woman.png';
+import ContentComponent from "./common/ContentComponent";
+import TitleComponent from "./common/TitleComponent";
 const getBlogUpdateComponentData = {
     title: 'Blog & Updates',
     content: 'Latest Articles & Tips',
@@ -11,7 +11,7 @@ function BlogUpdateComponent() {
         <div className="w-3/5 mx-auto mb-11">
             <TitleComponent data={getBlogUpdateComponentData}></TitleComponent>
             <ContentComponent data={getBlogUpdateComponentData}></ContentComponent>
-            <div class="grid grid-cols-2 gap-2">
+            <div class="grid sm:grid-cols-2 justify-center gap-2">
                 <div className='pos-relative'>
                     <img class="height30rem object-cover rounded-lg img-css" src={mansun} alt=""/>
                     <div className='blog-image'>

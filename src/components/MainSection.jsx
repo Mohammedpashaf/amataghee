@@ -1,13 +1,13 @@
-import ExploreProductComponent from './ExploreProductComponent';
-import QualityProductComponent from './QualityProductComponent';
 import AboutCompany from './AboutCompany';
-import BlogUpdateComponent from './BlogsUpdateComponent';
-import ReviewsSection from './ReviewsSection';
 import AmataNaturals from './AmataNatural';
-import OurProcess from './OurProcess';
-import OurFarmers from './OurFarmers';
+import BlogUpdateComponent from './BlogsUpdateComponent';
 import ContactUs from './ContactUs';
+import ExploreProductComponent from './ExploreProductComponent';
+import OurFarmers from './OurFarmers';
 import OurInstagram from './OurInstagram';
+import OurProcess from './OurProcess';
+import QualityProductComponent from './QualityProductComponent';
+import ReviewsSection from './ReviewsSection';
 
 function MainSection(params) {
     return (

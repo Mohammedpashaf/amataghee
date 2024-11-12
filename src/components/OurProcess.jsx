@@ -1,13 +1,13 @@
 
-import TitleComponent from './common/TitleComponent';
-import CustomButton from './common/CustomButton';
-import ContentComponent from './common/ContentComponent';
-import DescriptionComponent from './common/DescriptionComponent';
-import wheat from '../assets/img/wheat.png';
-import medal from '../assets/img/medal.png';
-import Portrait from '../assets/img/Portrait.png';
 import dianthus2 from '../assets/img/dianthus (2).png';
 import dianthus from '../assets/img/dianthus.png';
+import medal from '../assets/img/medal.png';
+import Portrait from '../assets/img/Portrait.png';
+import wheat from '../assets/img/wheat.png';
+import ContentComponent from './common/ContentComponent';
+import CustomButton from './common/CustomButton';
+import DescriptionComponent from './common/DescriptionComponent';
+import TitleComponent from './common/TitleComponent';
 
 const getOurProcessData = {
     title: 'OUR PROCESS',
@@ -19,8 +19,8 @@ function OurProcess(params) {
     return (
         <div class="mt-8 grid grid-cols-1 font-sm gap-[0.625rem] md:grid-cols-2 md:gap-x-0.75 noborder">
             <div className='main-section-part1'>
-                <div class="flex p-l-10">
-                    <div class="p-5 mt-1 bg-white py-1.25 px-0.75 items-center text-center w-1/2 md:w-full">
+                <div class="sm:flex p-l-10">
+                    <div class="p-5 mt-1 bg-white py-1.25 px-0.75 items-center text-center sm:w-1/2 md:w-full">
                         <p>
                             <span class="mt-0.5 block font-medium text-sm leading-[1.125rem]">
                                 <TitleComponent data={getOurProcessData}></TitleComponent>
@@ -53,12 +53,12 @@ function OurProcess(params) {
                 </div>
             </div>
             <div>
-                <div class="flex">
-                    <div class="mt-1 py-1.25 px-0.75 items-center text-center w-1/2 md:w-full position-r mt-8">
+                <div class="sm:flex p-4">
+                    <div class="mt-1 py-1.25 px-0.75 items-center text-center sm:w-1/2 md:w-full position-r mt-8">
                         <div class="grid-container">
-                            <img className='height30rem object-cover' src={Portrait} alt="Image 1" />
-                            <img className='height30rem object-cover' src={dianthus2} alt="Image 2" />
-                            <img className='height30rem object-cover' src={dianthus} alt="Image 3" />
+                            <img className='height30rem object-fill' src={Portrait} alt="Image 1" />
+                            <img className='height30rem object-fill' src={dianthus2} alt="Image 2" />
+                            <img className='height30rem object-fill' src={dianthus} alt="Image 3" />
                         </div>
                     </div>
                 </div>

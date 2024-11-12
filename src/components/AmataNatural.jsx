@@ -1,15 +1,15 @@
-import TitleComponent from './common/TitleComponent';
-import CustomButton from './common/CustomButton';
-import ContentComponent from './common/ContentComponent';
-import DescriptionComponent from './common/DescriptionComponent';
-import CustomPlayButton from './common/CustomPlayButton';
-import img1 from '../assets/img/Ghee.png'
-import img2 from '../assets/img/logo.png';
 import img3 from '../assets/img/Cold pressed  Oil.png';
-import img4 from '../assets/img/honey.png';
+import img1 from '../assets/img/Ghee.png';
 import handsome from '../assets/img/handsome.png';
+import img4 from '../assets/img/honey.png';
 import img6 from '../assets/img/julier.png';
+import img2 from '../assets/img/logo.png';
 import img7 from '../assets/img/Quote-icon.png';
+import ContentComponent from './common/ContentComponent';
+import CustomButton from './common/CustomButton';
+import CustomPlayButton from './common/CustomPlayButton';
+import DescriptionComponent from './common/DescriptionComponent';
+import TitleComponent from './common/TitleComponent';
 
 const getAmataNaturalsData = {
     title: 'AMATA NATURALS',
@@ -22,8 +22,8 @@ function AmataNaturals(params) {
         <div>
             <div class="mt-1 grid grid-cols-1 font-sm gap-[0.625rem] md:grid-cols-2 md:gap-x-0.75 noborder">
                 <div className='main-section-part1'>
-                    <div class="flex p-l-10">
-                        <div class="p-5 mt-1 bg-white py-1.25 px-0.75 items-center text-center w-1/2 md:w-full">
+                    <div class="p-l-10">
+                        <div class="p-5 mt-1 bg-white py-1.25 px-0.75 items-center text-center sm:w-1/2 md:w-full">
                             <p>
                                 <span class="mt-0.5 block font-medium text-sm leading-[1.125rem]">
                                     <TitleComponent data={getAmataNaturalsData}></TitleComponent>
@@ -39,39 +39,39 @@ function AmataNaturals(params) {
                             </p>
                         </div>
                     </div>
-                    <div class='man pt-8'>
-                        <img src={handsome} loading="lazy"/>
+                    <div class='man pt-8 sm:shrink-0 w-full'>
+                        <img src={handsome} loading="lazy" className='sm:h-full'/>
                     </div>
                 </div>
                 <div>
                     <div class="flex">
-                        <div class="mt-1 py-1.25 px-0.75 items-center text-center w-1/2 md:w-full">
+                        <div class="mt-1 py-1.25 px-0.75 items-center text-center sm:w-1/2 md:w-full">
                             <div class="grid grid-cols-2 gap-4 m-b-10">
                                 <div className='pad-margin-left'>
                                     <h1 className='classyears'>10+ Years</h1>
                                     <h3 className='classyears2'>We are growing and selling organic food</h3>
                                 </div>
                                 <div class="">
-                                    <img class="object-contain h-48 w-full p-t-15" src={img2} />
+                                    <img class="object-contain h-48 w-full p-t-15 object-fit" src={img2} />
                                 </div>
                             </div>
-                            <div class="flex">
-                                <div className="flex-1 p-5">
+                            <div class="sm:flex">
+                                <div className="sm:flex-1 p-5">
                                     <div >
                                         <div className="uppercase tracking-wide text-sm text-black-500 font-semibold mb-4 text-left">Pure A2 Ghee</div>
-                                        <img className="h-48 w-full" src={img1} />
+                                        <img className="h-48 w-full object-fit" src={img1} />
                                     </div>
                                 </div>
-                                <div class="flex-1 p-5">
+                                <div class="sm:flex-1 p-5">
                                     <div class="">
                                         <div class="uppercase tracking-wide text-sm text-black-500 font-semibold mb-4 text-left">Cold Pressure Oil</div>
-                                        <img class="h-48 w-full" src={img3} />
+                                        <img class="h-48 w-full object-fit" src={img3} />
                                     </div>
                                 </div>
-                                <div class="flex-1 p-5">
+                                <div class="sm:flex-1 p-5">
                                     <div >
                                         <div class="uppercase tracking-wide text-sm text-black-500 font-semibold mb-4 text-left">Honey</div>
-                                        <img class="h-48 w-full" src={img4} />
+                                        <img class="h-48 w-full object-fit" src={img4} />
                                     </div>
                                 </div>
                             </div>

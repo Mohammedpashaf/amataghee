@@ -1,7 +1,7 @@
-import CustomButton from './common/CustomButton';
+import Antonin from '../assets/img/Antonin Hafer.png';
 import julier from '../assets/img/julier.png';
 import lvan from '../assets/img/lvan.png';
-import Antonin from '../assets/img/Antonin Hafer.png'
+import CustomButton from './common/CustomButton';
 
 function OurFarmers(params) {
     return(
@@ -10,11 +10,11 @@ function OurFarmers(params) {
                 <h5 class="text-3xl font-bold titleCss mb-4 mt-4">Our Farmers</h5>   
                 <h1 class='explorehead'>We Have More Than 20+ Years Practical Experience</h1>
             </div>
-            <div class="flex wi-full mx-auto text-center max-w-screen-lg mx-auto mt-2 ">
+            <div class="sm:flex wi-full mx-auto text-center max-w-screen-lg mx-auto mt-2 ">
                 <div className="flex-1">
                     <div class="max-w-screen-xl mx-auto p-4">
                         <div class="rounded overflow-hidden flex flex-col max-w-xl mx-auto">
-                            <a href="#"> <img class="object-fill h-80" src={julier} alt="julier"/></a>
+                            <a href="#"> <img class="object-fill md:h-80" src={julier} alt="julier"/></a>
                             <div class="relative -mt-3 py-5 bg-gray-100  m-10">
                                 <figcaption class="text-base p-2">
                                     <div class="farmour-title">

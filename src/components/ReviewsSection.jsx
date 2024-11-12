@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
+import navigation from '../assets/img/Navigation.png';
 import r1 from '../assets/img/r1.png';
 import r2 from '../assets/img/r2.png';
 import r3 from '../assets/img/r3.png';
 import r4 from '../assets/img/r4.png';
-import TitleComponent from './common/TitleComponent';
 import ContentComponent from './common/ContentComponent';
-import navigation from '../assets/img/Navigation.png'
+import TitleComponent from './common/TitleComponent';
 const getReviewsSectionData = {
   title: 'Testimonials',
   content: 'Customer Stories',
