@@ -1,7 +1,9 @@
 function CustomButton(props) {
+  debugger
+  const getClasname = props.customClass ? props.className : 'Custombtn';
     return(
       <div>
-        <button className="Custombtn">{props.name}</button>
+        <button className={getClasname}>{props.name}</button>
       </div>
         
     )

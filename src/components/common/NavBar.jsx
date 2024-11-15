@@ -1,29 +1,33 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable no-script-url */
 import { useCallback, useState } from 'react';
-import amataLogo from '../../assets/img/amata-logo.jpeg';
+import { Link } from "react-router-dom";
 import ArrowDown from './ArrowDown';
 import SubHeader from './Subheader';
 
-export default function Example() {
+export default function Example(props) {
   const [expand, setExpand] = useState(false);
+  debugger
 
   const handleClick = useCallback(() => {
     setExpand(true);
-  }, [expand]);
+  }, []);
 
   const closeNav = useCallback(() => {
     setExpand(false);
-  }, [expand]);
+  }, []);
+
   
   return (
     
     <div className='sm:w-4/5 mx-auto text-center max-w-screen-lg mx-auto'>
       <header class="py-4 sm:px-4 sm:px-10 relative z-50">
         <div class='max-w-7xl w-full mx-auto flex flex-wrap items-center gap-4 p-2'>
-          <a href="javascript:void(0)"><img src={amataLogo} alt="logo" class='w-40' />
+          <a href="javascript:void(0)"><img src={props.data.img} alt="logo" className={props.data.width} />
           </a>
       
           <div id="collapseMenu"
-            className={"max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-40 max-lg:before:inset-0 max-lg:before:z-50 " + (expand ? '' : 'max-lg:hidden lg:!block')}
+            className={"absolute right-32 max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-40 max-lg:before:inset-0 max-lg:before:z-50 " + (expand ? '' : 'max-lg:hidden lg:!block')}
             >
             <button id="toggleClose" onClick={closeNav} class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-black" viewBox="0 0 320.591 320.591">
@@ -37,61 +41,35 @@ export default function Example() {
             </button>
       
             <ul class='lg:flex lg:ml-12 lg:gap-x-6 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-4 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
-              <li class='group gap-7 m-r-2 m-l-3 max-lg:border-b max-lg:py-3 relative'>
-                <a href='javascript:void(0)'
-                  class='hover:text-[#62360F] text-gray-600 text-[15px] font-bold lg:hover:fill-[#62360F] block'>About<ArrowDown />
-                </a>
-                <ul
-                  class='absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
-                  <SubHeader name='About'/>
-                  <SubHeader name='Products'/>
-                  <SubHeader name='Services'/>
-                  <SubHeader name='News'/>
-                </ul>
-              </li>
-              <li class='group gap-7 m-r-2 max-lg:border-b max-lg:py-3 relative'>
-                <a href='javascript:void(0)'
-                  class='hover:text-[#62360F] text-gray-600 text-[15px] font-bold lg:hover:fill-[#62360F] block'>Products <ArrowDown />
-                </a>
-                <ul
-                  class='absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
-                  <SubHeader name='About'/>
-                  <SubHeader name='Products'/>
-                  <SubHeader name='Services'/>
-                  <SubHeader name='News'/>
-                </ul>
-              </li>
-              <li class='group gap-7 m-r-2 max-lg:border-b max-lg:py-3 relative'>
-                <a href='javascript:void(0)'
-                  class='hover:text-[#62360F] text-gray-600 text-[15px] font-bold lg:hover:fill-[#62360F] block'>Services <ArrowDown />
-                </a>
-                <ul
-                  class='absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
-                  <SubHeader name='About'/>
-                  <SubHeader name='Products'/>
-                  <SubHeader name='Services'/>
-                  <SubHeader name='News'/>
-                </ul>
-              </li>
-              <li class='group gap-7 m-r-2 max-lg:border-b max-lg:py-3 relative'>
-                <a href='javascript:void(0)'
-                  class='hover:text-[#62360F] text-gray-600 text-[15px] font-bold lg:hover:fill-[#62360F] block'>News <ArrowDown />
-                </a>
-                <ul
-                  class='absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
-                  <SubHeader name='About'/>
-                  <SubHeader name='Products'/>
-                  <SubHeader name='Services'/>
-                  <SubHeader name='News'/>
-                </ul>
-              </li>
+              {
+                //  m-l-3
+                props.data.headerData.map((value)=>(
+                  <li class='group gap-7 m-r-2 max-lg:border-b max-lg:py-3 relative'>
+                    <a href='javascript:void(0)'
+                      class='hover:text-[#62360F] text-gray-600 text-[15px] font-bold lg:hover:fill-[#62360F] block'><Link to={value.path}>{value.name}</Link>
+                      {value.subheader && (<ArrowDown />)}
+                    </a>
+                    {value.subheader && (
+                      <ul class='absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
+                        
+                      {value.subheader.map((value2)=>(
+                        <SubHeader name={value2.name}/>
+                      ))}
+                        </ul>
+                    )}
+                  </li>
+                ))
+              }
             </ul>
           </div>
       
           <div class='flex ml-auto'>
-            <button
+            {props.data.contactus && (
+              <button
               class='hover:text-[#62360F] border border-full-3 flex items-center transition-all font-bold px-5 sm:py-3'>Contact Us
             </button>
+            )}
+            
       
             <button onClick={handleClick} id="toggleOpen" class='lg:hidden ml-7'>
               <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
