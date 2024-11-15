@@ -21,6 +21,9 @@ module.exports = {
         '11': '11',
         '12': '12',
         '13': '13',
+      },
+      objectPosition: {
+        'center-bottom': 'center bottom',
       }
     },
   },
