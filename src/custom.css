@@ -66,6 +66,13 @@ color: #62360F;
 
 
 }
+.onlyButton{
+  width:100%;
+  padding: 20px 50px 20px 50px;
+  background: #62360F;
+  color: #fff;
+  position: relative;
+}
 .Custombtn{
     width:100%;
     padding: 20px 50px 20px 50px;
@@ -188,6 +195,13 @@ color: #62360F;
 }
 .border-full{
     border: 1px solid #62360F;
+    border-collapse: collapse;
+}
+.border-bottom{
+  border-bottom: 1px solid #62360F;
+}
+.border-right{
+  border-right: 1px solid #62360F;
 }
 .border-full-3{
     border: 3px solid #62360F;
@@ -329,6 +343,11 @@ text-align: left;
 color: #62360F;
 /* display: flex; */
 }
+.our-journey-header{
+  font-size: 40px;
+  font-weight: 500;
+  text-align: left;
+}
 @media screen and (max-width: 1024px) {
   .p-l-10 {
     padding-left: 0;
@@ -345,4 +364,10 @@ color: #62360F;
   .p-l-5{
     padding-left: 0;
   }
+  .border-right{
+    border-right: 0;
+  }
+}
+.quote1{
+  background-color:  #FFEEC0;
 }
