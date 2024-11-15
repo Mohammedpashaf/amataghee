@@ -1,8 +1,8 @@
 import amataLogo from '../assets/img/logo.png';
+import Footer from './common/FooterSecond';
 import NavBar from './common/NavBar';
 import ExploreProductComponent from './ExploreProductComponent';
 import OurJourney from './OurJourney';
-import Footer from './SecondPage/Components/Common/Footer';
 import StayUpdated from './StayUpdated';
 import WhyYouBuy from './WhyYouBuy';
 
