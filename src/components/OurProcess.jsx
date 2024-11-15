@@ -1,8 +1,7 @@
 
-import dianthus2 from '../assets/img/dianthus (2).png';
 import dianthus from '../assets/img/dianthus.png';
 import medal from '../assets/img/medal.png';
-import Portrait from '../assets/img/Portrait.png';
+import { default as dianthus2, default as Portrait } from '../assets/img/Portrait.png';
 import wheat from '../assets/img/wheat.png';
 import ContentComponent from './common/ContentComponent';
 import CustomButton from './common/CustomButton';
